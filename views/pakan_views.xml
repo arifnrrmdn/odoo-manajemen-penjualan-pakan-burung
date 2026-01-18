@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_pakan_list" model="ir.ui.view">
+        <field name="name">pakan.burung.list</field>
+        <field name="model">pakan.burung</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="jenis"/>
+                <field name="harga"/>
+                <field name="stok"/>
+            </list>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ===================== -->
+    <!-- LIST VIEW -->
+    <!-- ===================== -->
+    <record id="view_pakan_partner_list" model="ir.ui.view">
+        <field name="name">pakan.partner.list</field>
+        <field name="model">pakan.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="tipe"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ===================== -->
+    <!-- FORM VIEW -->
+    <!-- ===================== -->
+    <record id="view_pakan_partner_form" model="ir.ui.view">
+        <field name="name">pakan.partner.form</field>
+        <field name="model">pakan.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="tipe"/>
+                    </group>
+                    <group>
+                        <field name="phone"/>
+                        <field name="email"/>
+                    </group>
+                    <group>
+                        <field name="alamat"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ===================== -->
+    <!-- ACTION -->
+    <!-- ===================== -->
+    <record id="action_pakan_partner" model="ir.actions.act_window">
+        <field name="name">Pelanggan &amp; Supplier</field>
+        <field name="res_model">pakan.partner</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== -->
+    <!-- MENU -->
+    <!-- ===================== -->
+
+    <menuitem id="menu_pakan_partner"
+              name="Pelanggan &amp; Supplier"
+              parent="menu_pakan_root"
+              action="action_pakan_partner"
+              sequence="20"/>
+
+</odoo>
